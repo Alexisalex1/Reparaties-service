@@ -1,1 +1,6 @@
-insert into roles(rolename) values ('ROLE_USER'), ('ROLE_ADMIN');
+-- Insert roles
+INSERT INTO roles (rolename)
+SELECT 'ROLE_USER' WHERE NOT EXISTS (SELECT 1 FROM roles WHERE rolename = 'ROLE_USER');
+
+INSERT INTO roles (rolename)
+SELECT 'ROLE_ADMIN' WHERE NOT EXISTS (SELECT 1 FROM roles WHERE rolename = 'ROLE_ADMIN');

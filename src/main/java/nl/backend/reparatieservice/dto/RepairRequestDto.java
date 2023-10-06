@@ -2,6 +2,8 @@ package nl.backend.reparatieservice.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Lob;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 import nl.backend.reparatieservice.model.Invoice;
 
 
@@ -11,17 +13,21 @@ import java.util.List;
 
 public class RepairRequestDto {
     public Long requestId;
+    @NotBlank(message = "Repair description is required")
+    @Size(max = 500, message = "Repair description must not exceed 500 characters")
     public String repairDescription;
+
+    @NotNull(message = "Repair date is required")
+    @FutureOrPresent(message = "Repair date must be in the present")
     public LocalDateTime repairDate;
+
+    @NotNull(message = "Customer information is required")
+    @Valid
     public CustomerDto customer;
+
+    @NotNull(message = "Total cost is required")
     public BigDecimal totalCost;
-
-
     public Invoice invoice;
-
-
-
-
 
     public List<UploadedPhotoDto> uploadedPhotos;
     public RepairStatusDto repairStatus;

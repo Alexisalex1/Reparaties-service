@@ -1,9 +1,6 @@
 package nl.backend.reparatieservice.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 
 import java.math.BigDecimal;
@@ -12,7 +9,7 @@ import java.util.List;
 @Entity
 public class RepairItem {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long repairItemId;
     private String itemName;
     private String description;

@@ -23,7 +23,7 @@ public class RepairOptionService {
 
     private RepairOptionDto converToRepairOptionDto(RepairOption repairOption) {
         RepairOptionDto repairOptionDto = new RepairOptionDto();
-        repairOptionDto.Id = repairOption.getId();
+        repairOptionDto.id = repairOption.getId();
         repairOptionDto.optionName = repairOption.getOptionName();
         repairOptionDto.description = repairOption.getDescription();
         repairOptionDto.cost = repairOption.getCost();

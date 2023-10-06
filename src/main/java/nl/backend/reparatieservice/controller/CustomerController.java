@@ -1,6 +1,6 @@
 package nl.backend.reparatieservice.controller;
 
-import com.fasterxml.jackson.annotation.JsonView;
+
 import nl.backend.reparatieservice.dto.CustomerDto;
 import nl.backend.reparatieservice.exception.CustomException;
 import nl.backend.reparatieservice.exception.EntityNotFoundException;
@@ -20,7 +20,7 @@ public class CustomerController {
 
     private final CustomerService customerService;
 
-    @Autowired
+
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }

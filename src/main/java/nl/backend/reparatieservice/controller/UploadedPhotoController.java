@@ -37,13 +37,15 @@ public class UploadedPhotoController {
         }
     }
 
-    // retrieve a photo by ID
+
+    // Download a photo by ID
     @GetMapping("/{id}")
     public ResponseEntity<?> getPhoto(@PathVariable Long id) {
         try {
             byte[] photoData = uploadedPhotoService.getPhotoData(id);
             HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.IMAGE_JPEG); // Adjust content type based on your file type
+            headers.setContentType(MediaType.IMAGE_JPEG);
+            headers.setContentDispositionFormData("attachment", "photo_" + id + ".jpg");
             return new ResponseEntity<>(photoData, headers, HttpStatus.OK);
         } catch (EntityNotFoundException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Photo not found: " + e.getMessage());
