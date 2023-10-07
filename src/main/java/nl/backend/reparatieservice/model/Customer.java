@@ -17,7 +17,7 @@ public class Customer {
     private String email;
     private String phoneNumber;
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.REMOVE)
     private List<RepairRequest> repairRequests;
 
     public Long getCustomerId() {
@@ -51,5 +51,6 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
 
 }

@@ -4,7 +4,7 @@ import nl.backend.reparatieservice.dto.InvoiceDto;
 import nl.backend.reparatieservice.exception.CustomException;
 import nl.backend.reparatieservice.exception.EntityNotFoundException;
 import nl.backend.reparatieservice.service.InvoiceService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class InvoiceController {
     private final InvoiceService invoiceService;
 
-    @Autowired
+
     public InvoiceController(InvoiceService invoiceService) {
         this.invoiceService = invoiceService;
     }

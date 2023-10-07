@@ -6,11 +6,11 @@ import nl.backend.reparatieservice.exception.CustomException;
 import nl.backend.reparatieservice.exception.EntityNotFoundException;
 import nl.backend.reparatieservice.model.RepairRequest;
 import nl.backend.reparatieservice.service.RepairRequestService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+
 import java.util.List;
 
 @RestController
@@ -19,7 +19,7 @@ public class RepairRequestController {
 
     private final RepairRequestService repairRequestService;
 
-    @Autowired
+
     public RepairRequestController(RepairRequestService repairRequestService) {
         this.repairRequestService = repairRequestService;
     }

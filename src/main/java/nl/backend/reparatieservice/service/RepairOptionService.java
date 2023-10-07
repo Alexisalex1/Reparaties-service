@@ -15,7 +15,7 @@ public class RepairOptionService {
 
     private final RepairOptionRepository repairOptionRepository;
 
-    @Autowired
+
     public RepairOptionService(
             RepairOptionRepository repairOptionRepository) {
         this.repairOptionRepository = repairOptionRepository;

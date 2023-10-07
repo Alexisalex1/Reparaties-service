@@ -1,7 +1,7 @@
 package nl.backend.reparatieservice.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Lob;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import nl.backend.reparatieservice.model.Invoice;
@@ -23,6 +23,7 @@ public class RepairRequestDto {
 
     @NotNull(message = "Customer information is required")
     @Valid
+    @JsonBackReference
     public CustomerDto customer;
 
     @NotNull(message = "Total cost is required")

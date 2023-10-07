@@ -4,7 +4,7 @@ import nl.backend.reparatieservice.exception.CustomException;
 import nl.backend.reparatieservice.exception.EntityNotFoundException;
 import nl.backend.reparatieservice.model.RepairStatus;
 import nl.backend.reparatieservice.service.RepairStatusService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +17,7 @@ public class RepairStatusController {
 
     private final RepairStatusService repairStatusService;
 
-    @Autowired
+
     public RepairStatusController(RepairStatusService repairStatusService) {
         this.repairStatusService = repairStatusService;
     }

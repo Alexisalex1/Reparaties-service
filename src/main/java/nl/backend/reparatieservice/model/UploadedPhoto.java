@@ -17,10 +17,7 @@ public class UploadedPhoto {
     private byte[] photoData;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
-    @JoinTable(
-            name = "repair_request_photos",
-            joinColumns = @JoinColumn(name = "photo_Id"),
-            inverseJoinColumns = @JoinColumn(name = "request_Id"))
+
 
     private RepairRequest repairRequest;
 

@@ -1,6 +1,6 @@
 package nl.backend.reparatieservice.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -21,8 +21,8 @@ public class CustomerDto {
     @NotBlank(message = "Phone number is required")
     @Pattern(regexp = "\\d{10}", message = "Phone number must be a 10-digit number")
     public String phoneNumber;
-    @JsonIgnore
 
+    @JsonManagedReference
     public List<RepairRequestDto> repairRequests;
 
     public void setRepairRequests(List<RepairRequestDto> repairRequests) {

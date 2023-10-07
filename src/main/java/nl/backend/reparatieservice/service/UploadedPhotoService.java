@@ -22,7 +22,7 @@ public class UploadedPhotoService {
     private final UploadedPhotoRepository uploadedPhotoRepository;
     private final RepairRequestRepository repairRequestRepository;
 
-    @Autowired
+
     public UploadedPhotoService(
             UploadedPhotoRepository uploadedPhotoRepository,
             RepairRequestRepository repairRequestRepository

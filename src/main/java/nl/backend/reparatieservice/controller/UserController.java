@@ -44,7 +44,7 @@ public class UserController {
         }
 
         try {
-            // this checks if the username already exists and then processes it
+
             Optional<User> existingUser = userRepository.findById(userDto.username);
             if (existingUser.isPresent()) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username already exists.");

@@ -15,7 +15,7 @@ public class RepairItemService {
 
     private final RepairItemRepository repairItemRepository;
 
-    @Autowired
+
     public RepairItemService(RepairItemRepository repairItemRepository) {
         this.repairItemRepository = repairItemRepository;
     }

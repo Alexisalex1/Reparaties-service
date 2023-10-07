@@ -20,7 +20,7 @@ public class RepairStatusService {
 
     private final RepairStatusRepository repairStatusRepository;
 
-    @Autowired
+
     public RepairStatusService(RepairStatusRepository repairStatusRepository) {
         this.repairStatusRepository = repairStatusRepository;
     }

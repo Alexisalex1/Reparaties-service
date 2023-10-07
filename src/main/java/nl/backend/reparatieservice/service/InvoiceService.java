@@ -17,7 +17,7 @@ public class InvoiceService {
     private final InvoiceRepository invoiceRepository;
     private final RepairRequestRepository repairRequestRepository;
 
-    @Autowired
+
     public InvoiceService(InvoiceRepository invoiceRepository, RepairRequestRepository repairRequestRepository) {
         this.invoiceRepository = invoiceRepository;
         this.repairRequestRepository = repairRequestRepository;

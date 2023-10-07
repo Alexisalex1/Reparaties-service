@@ -18,7 +18,7 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
     private final RepairRequestService repairRequestService;
 
-    @Autowired
+
     public CustomerService(
             CustomerRepository customerRepository,
             RepairRequestService repairRequestService

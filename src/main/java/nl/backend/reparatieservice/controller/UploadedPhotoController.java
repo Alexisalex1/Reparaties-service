@@ -4,7 +4,6 @@ import nl.backend.reparatieservice.dto.UploadedPhotoDto;
 import nl.backend.reparatieservice.exception.CustomException;
 import nl.backend.reparatieservice.exception.EntityNotFoundException;
 import nl.backend.reparatieservice.service.UploadedPhotoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -18,7 +17,7 @@ public class UploadedPhotoController {
 
     private final UploadedPhotoService uploadedPhotoService;
 
-    @Autowired
+
     public UploadedPhotoController(
             UploadedPhotoService uploadedPhotoService
     ) {

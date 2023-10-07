@@ -5,7 +5,7 @@ import nl.backend.reparatieservice.exception.CustomException;
 import nl.backend.reparatieservice.exception.EntityNotFoundException;
 import nl.backend.reparatieservice.model.RepairItem;
 import nl.backend.reparatieservice.service.RepairItemService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,6 @@ public class RepairItemController {
 
     private final RepairItemService repairItemService;
 
-    @Autowired
     public RepairItemController(RepairItemService repairItemService) {
         this.repairItemService = repairItemService;
     }

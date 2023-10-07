@@ -27,7 +27,7 @@ public class RepairRequestService {
     private final InvoiceRepository invoiceRepository;
 
 
-    @Autowired
+
     public RepairRequestService(
             CustomerRepository customerRepository,
             RepairRequestRepository repairRequestRepository,
